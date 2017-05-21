@@ -8,6 +8,7 @@ $(window).load(function(){
             autoplay: true
         }
     );
+});
 
 $(window).load(function(){
   $(".pro_img_three img").click(function(){

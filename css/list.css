@@ -65,6 +65,15 @@ header #header_in {
 
 .sp_menu_toggle {
   display: none; }
+  .sp_menu_toggle li {
+    list-style: none;
+    background: white;
+    border: 1px solid #eee;
+    margin-bottom: 0px;
+    padding: 5px 5px 5px 5px; }
+    .sp_menu_toggle li a {
+      text-decoration: none;
+      color: #887f69; }
 
 .container {
   width: 100%; }
@@ -276,7 +285,7 @@ p1 {
   width: 100%; }
 
 .search_text input {
-  background: #e2ddd4;
+  background: #f9f8f6;
   border: 1px;
   background-image: url("../images/top/search_icon.png");
   background-position-x: 95%;
@@ -422,6 +431,7 @@ footer.container {
         content: '・'; }
 
 .small {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 40px; }
 
 /*# sourceMappingURL=list.css.map */

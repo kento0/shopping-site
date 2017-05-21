@@ -99,6 +99,21 @@ header {
 
 .sp_menu_toggle{
   display: none;
+  
+  li{
+      list-style: none;
+      background: white;
+      border: 1px solid #eee;
+      margin-bottom: 0px;
+      padding: 5px 5px 5px 5px;
+      
+      a{
+      text-decoration: none;
+      color: #887f69;
+      }
+      
+    }
+    
 }
 
   
@@ -381,7 +396,7 @@ p1{
 }
 
 .search_text input{
-  background: #e2ddd4;
+  background: #f9f8f6;
   border: 1px;
   background-image: url("../images/top/search_icon.png");
   background-position-x: 95%;
@@ -570,4 +585,5 @@ footer.container{
 
 .small{
   text-align: center;
+  margin-bottom: 40px;
 }
