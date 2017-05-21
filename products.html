@@ -27,6 +27,17 @@
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    
+    <!-- Owl Carouselを動作させるために追加 -->
+    <script src="test-carousel.js"></script>
 
 </head>
 
@@ -62,6 +73,13 @@
                                 <li><img id="insta_btm" class="u-max-full-width" src="images/top_sp/insta.png" alt="insta" srcset="images/top_sp/insta@2x.png 2x" /></li>
                                 <li id=sub_navi_btm><img class="u-max-full-width" src="images/top_sp/menu_icon.png" alt="menu" srcset="images/top_sp/menu_icon@2x.png 2x" /></li>
                             </ul>
+                            
+                            <ul class="sp_menu_toggle">
+                                  <li><a href="">ログイン</a></li>
+                                  <li><a href="">カート</a></li>
+                                  <li><a href="">マイページ</a></li>
+                                  <li><a href="">ショッピングガイド</a></li>
+                            </ul>
                         
                         </div>
                             
@@ -80,7 +98,7 @@
             <div id="main" class="nine columns">
                 
                 <div class="top_box">
-                        <p>HOME / カテゴリー名</p>
+                        <p>HOME / カテゴリー名 / 商品名</p>
                 </div>
                 
                 <div class="main_box">
@@ -105,6 +123,9 @@
                         
                         <div class="pro_img_two">
                             
+                            <div class="pro_img_three">
+                                <img src="./images/products/pro_img_01.jpg">
+                            </div>
                             <div class="pro_img_three">
                                 <img src="./images/products/pro_img_02.jpg">
                             </div>
@@ -132,9 +153,7 @@
                             <div class="pro_img_three">
                                 <img src="./images/products/gray_pro_img.jpg">
                             </div>
-                            <div class="pro_img_three">
-                                <img src="./images/products/gray_pro_img.jpg">
-                            </div>
+                    
                         </div>
                         
                     </div>
@@ -164,39 +183,39 @@
                     
                     <div class="price_box">
                         
-                        <div class="price">
-                            
-                            <div class="pprice">
-                            
-                                <img src="./images/products/title_price.png">
+                        <div class="price_cube">
+                        
+                            <div class="price">
+                                
+                                <div class="pprice">
+                                    <img src="./images/products/title_price.png">
+                                </div>
+                                
+                                <div class="ppprice">
+                                    <p style="color:#ff2770; font-size: 30px; font-style: oblique; margin-bottom: 0px; padding-top: 10px;">￥1000</p>
+                                    <p style="font-size: 15px; font-weight: bold; font-style: oblique; margin-bottom: 0px;  padding-top: 25px;">(tax in)</p>
+                                </div>
                                 
                             </div>
-                            
-                            <div class="ppprice">
                                 
-                                <p style="color:#ff2770; font-size: 30px; font-style: oblique;">￥1000</p>
-                                <p style="font-size: 15px; font-weight: bold; font-style: oblique;">(tax in)</p>
+                            <div class="quantity_box">
+                        
+                                <div class="quantity_one">
+                                    <img src="./images/products/title_quantity.png">
+                                </div>
                                 
+                                <div class="quantity_two">
+                                    <input type="text" name="namae" size="30" maxlength="20">
+                                </div>
+                        
                             </div>
-                                
+                            
                         </div>
                         
-                        <div class="price_two">
+                        <div class="add_two">
                             
                             <img src="./images/products/add_to_cart.png">
                             
-                        </div>
-                        
-                    </div>
-                    
-                    <div class="quantity_box">
-                        
-                        <div class="quantity_one">
-                            <img src="./images/products/title_quantity.png">
-                        </div>
-                        
-                        <div class="quantity_two">
-                            <input type="text" name="namae" size="30" maxlength="20">
                         </div>
                         
                     </div>
@@ -219,14 +238,14 @@
                         　 ト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト
                         　</p>
                         　
-                        <table>
+                        <table style="width:100%; ">
                         	<tbody>
                         		<tr>
-                        			<td style="background:#f9f8f6;">カラー</td>
+                        			<th style="background:#f9f8f6; ">カラー</th>
                         			<td>説明文が入ります説明文が入ります説明文が入ります</td>
                         		</tr>
                         		<tr>
-                        			<td style="background:#f9f8f6">サイズ</td>
+                        			<th style="background:#f9f8f6">サイズ</th>
                         			<td>説明文が入ります説明文が入ります説明文が入ります</td>
                         		</tr>
                         	</tbody>
@@ -267,6 +286,10 @@
                 
                 <div class="guide_cover">
                     <img src="./images/top/title_guide.png" alt="shoppingguide">
+                </div>
+                
+                <div class="guide_cover_sp">
+                     <img class="u-max-full-width" src="./images/top_sp/title_guide.png" alt="newitems" srcset="images/top_sp/title_guide@2x.png">
                 </div>
     
                 <div class="flex_container">

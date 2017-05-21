@@ -23,7 +23,7 @@ $beige : #f6f2eb;
 $box : #f9f8f6;
 
 body{
-  background: $beige;
+  background: #f9f8f6;
 }
 
 header {
@@ -93,10 +93,16 @@ header {
 }
 
 #sub_navi_btm{
+  cursor: pointer;
   @media(min-width: 550px){
     display:none;
   }
 }
+
+.sp_menu_toggle{
+  display: none;
+}
+
 
   
 
@@ -104,8 +110,32 @@ header {
   width: 100%;
 }
 
+#banner{
+  
+  @media(max-width:550px){
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+}
+
 .new_item {
   margin:20px 0 20px 0;
+  
+  @media(max-width:550px){
+    display: none;
+  }
+  
+}
+
+.new_item_sp{
+  text-align: center;
+  margin: 10px 0px 10px 0px;
+  
+  @media(min-width: 550px){
+    display: none;
+  }
+  
 }
 
 #new{
@@ -117,24 +147,39 @@ header {
 }
 
 #new .items_box {
-  background: $box;
-  width: 50%;
+  background: white;
+  width: 49%;
   height: 100%;
   padding: 10px;
   box-sizing: border-box;
-  
+  margin-bottom: 3px;
   
   @media(min-width: 550px){
-    background: $box;
-    width: 32%;
+    background: white;
+    width: 33%;
     height: 100%;
     box-sizing: border-box;
-    margin: 1px;
+    margin-bottom: 3px;
    }
   }
   
 .popular_items {
   margin:20px 0 20px 0;
+  
+  @media(max-width:550px){
+    display: none;
+  }
+  
+}
+
+.popular_items_sp{
+  text-align: center;
+  margin: 15px 0px 15px 0px;
+  
+  @media(min-width: 550px){
+    display: none;
+  }
+  
 }
 
 #popular{
@@ -143,33 +188,54 @@ header {
   flex-wrap:         wrap;
   -webkit-flex-wrap: wrap; /* Safari */
   justify-content: space-between;
+  width: 100%;
 }
 
 #popular .popular_box {
-  background: $box;
-  width: 50%;
+  background: white;
+  width: 49%;
   height: 100%;
   padding: 10px;
   box-sizing: border-box;
-  
+  margin-bottom: 3px;
   
   @media(min-width: 550px){
-    background: $box;
-    width: 32%;
+    background: white;
+    width: 33%;
     height: 100%;
     box-sizing: border-box;
-    margin: 1px;
+    margin-bottom: 3px;
    }
   }
   
 .guide_cover{
-   margin:30px 0 30px 0;
+   margin: 20px 0 20px 0;
+   
+    @media(max-width:550px){
+    display: none;
+  }
+  
+}
+
+.guide_cover_sp{
+  text-align: center;
+  margin: 15px 0px 15px 0px;
+  
+   @media(min-width: 550px){
+    display: none;
+  }
+  
 }
 
 .flex_container{
   display: flex;
   display: -webkit-flex;
   justify-content: space-between;
+  
+  @media(max-width:550px){
+    flex-direction: column;
+  }
+  
 }
 
 .flex_container .left_box{
@@ -178,10 +244,16 @@ header {
   width: 100%;
   box-sizing: border-box;
   margin-right: 10px;
+  background: white;
   
   img{
     display: block;
   }
+  
+  @media(max-width:550px){
+    margin-bottom: 10px;
+  }
+  
 }
 
 .aa{
@@ -205,12 +277,17 @@ header {
   padding-right: 15px;
   padding-bottom: 20px;
   box-sizing: border-box;
-  background: $box;
   width: 100%;
+  background: white;
   
   img{
     display: block;
   }
+  
+  @media(max-width:550px){
+    margin-bottom: 10px;
+  }
+  
 }
 
 .cc{
@@ -266,7 +343,7 @@ p1{
 }
 
 .search_text input{
-  background: $beige;
+  background: #e2ddd4;
   border: 1px;
   background-image: url("../images/top/search_icon.png");
   background-position-x: 95%;
@@ -301,6 +378,8 @@ p1{
   background: white;
   list-style: none;
   margin-bottom: 0px;
+  font-weight: bold;
+  font-size: 11px;
 }
 
 #categories_navi li{
@@ -316,6 +395,7 @@ p1{
 .about_cover{
   background: $text;
   padding: 13px;
+  margin-top: 10px;
 }
 
 .about_box{
@@ -329,8 +409,27 @@ p1{
   
 }
 
+.about_left{
+  
+  @media(max-width:550px){
+  margin-right: 10px;
+  width: 50%;
+  }
+  
+}
+
+.about_right{
+  
+  @media(max-width:550px){
+  margin-right: 10px;
+  width: 50%;
+  }
+  
+}
+
 .about_right p{
   margin-bottom: 0px;
+  margin-top: 20px;
 }
 
 .about_right img{
@@ -358,8 +457,27 @@ p1{
   
 }
 
+.shop_left{
+  
+  @media(max-width:550px){
+  margin-right: 10px;
+  width: 50%;
+  }
+  
+}
+
+.shop_right{
+  
+  @media(max-width:550px){
+  margin-right: 10px;
+  width: 50%;
+  }
+  
+}
+
 .shop_right p{
   margin-bottom: 0px;
+  margin-top: 20px;
 }
 
 .shop_right img{
@@ -385,7 +503,9 @@ footer.container{
     
     @media(max-width:550px){
       text-align: center;
+      margin: 15px 0 15px 0;
     }
+    
   }
   
   .contact{

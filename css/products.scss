@@ -23,7 +23,7 @@ $beige : #f6f2eb;
 $box : #f9f8f6;
 
 body{
-  background: $beige;
+  background: #f9f8f6;
 }
 
 header {
@@ -91,9 +91,14 @@ header {
 }
 
 #sub_navi_btm{
+  cursor: pointer;
   @media(min-width: 550px){
     display:none;
   }
+}
+
+.sp_menu_toggle{
+  display: none;
 }
 
   
@@ -108,10 +113,14 @@ header {
     background-repeat: no-repeat;
     background-position-y: center;
     background-color: #e2ddd4;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 3px;
     
     p{
         color: $text;
-        margin-left: 22px;
+        margin: 0px;
+        padding-left: 15px;
     }
 }
 
@@ -161,9 +170,6 @@ header {
   width: 100%;
   
 }
-.pro_img img{
-  height: 410px;
-}
 
 .pro_img_two{
   width: 40%;
@@ -173,8 +179,11 @@ header {
   flex-wrap:         wrap;
   
   @media(max-width:550px){
+    display: flex;
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap; /* Safari */
+    flex-wrap:         wrap;
     width: 100%;
-    margin: 0;
   }
   
 }
@@ -182,11 +191,10 @@ header {
 .pro_img_three img{
   width: 75px;
   height: 75px;
-  margin: 0px 5px 0px 5px;
+  padding: 4px;
   
   @media(max-width:550px){
-    margin-right: 4px;
-    margin-left: 4px;
+    padding: 3px;
   }
   
 }
@@ -199,52 +207,58 @@ header {
 .color_table{
   
   table , td, th {
+    width: 100%;
   	border: 1px solid #e1e1e1;
   	border-collapse: collapse;
   }
   td, th {
     color: #555;
   	padding: 3px;
-  	width: 30px;
+  	width: 100px;
   	height: 25px;
   }
 
 }
 
 .price_box{
-  display: flex;
-  display: -webkit-flex;
-  -webkit-justify-content: space-between; /* Safari */
-  justify-content:         space-between;
+  
+  @media(min-width:550px){
+    display: flex;
+    display: -webkit-flex;
+    }
+    
+}
+
+.price_cube{
+  
+  @media(min-width:550px){
+    width: 60%;
+  }
+  
 }
 
 .price{
   display: flex;
   display: -webkit-flex;
   border-top: 1px solid #e1e1e1;
-  border-bottom:  1px solid #e1e1e1;
-  padding: 10px 0px 10px 0px;
-  width: 60%;
+  border-bottom: 1px solid #e1e1e1;
+  margin-top: 15px;
 }
 
-.pprice {
-  
-  img{
-   margin-top: 20px;
-  }
-  
+.pprice{
+  flex: 1;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .ppprice{
   display: flex;
   display: -webkit-flex;
-  margin-left: auto;
-  margin-right: auto;
-  
+  flex: 1;
+  text-align: center;
+
   p{
-  top: 0;
-  bottom: 0;
-  margin: auto;
+    text-align: center;
   }
   
 }
@@ -252,31 +266,51 @@ header {
 .quantity_box{
   display: flex;
   display: -webkit-flex;
-  border-bottom:  1px solid #e1e1e1;
-  width: 60%;
-  padding-bottom:10px 0px 10px 0px;
-}
-
-.quantity_one{
-  img{
-    margin-top: 30px;
-    margin-bottom: 25px;
-  }
-}
-
-.quantity_two{
-  margin-left: auto;
-  margin-right: auto;
   
-  input{
-    border-radius: 0;
-    margin-top: 17px;
+  .quantity_one{
+    flex: 1;
+    margin-top: 20px;
   }
+  
+  .quantity_two{
+    flex: 1;
+    border-radius: none;
+    margin-top: 10px;
+    
+    input{
+      margin-bottom: 0px;
+    }
+    
+    @media(max-width:550px){
+    maxlength: 10px;
+    }
+  
+  }
+  
+}
+
+.add_two{
+  margin-top: 10px;
+  text-align: right;
+  
+  @media(max-width:550px){
+    text-align: center;
+    border-top: 1px solid #e1e1e1;
+    padding-top: 10px;
+  }
+  
+  @media(min-width:550px){
+    margin-left: auto;
+    }
   
 }
 
 .syokai_box{
-  margin-top: 30px;
+  margin-top: 15px;
+  
+   @media(min-width:550px){
+     border-top: 1px solid #e1e1e1;
+   }
   
   p{
     font-size: 15px;
@@ -284,6 +318,7 @@ header {
     color: $text;
     border-bottom: 1px solid black;
     padding-bottom: 10px;
+    padding-top: 15px;
   }
 }
 
@@ -304,19 +339,28 @@ header {
     font-weight: bold;
     margin-bottom: 0px;
   }
-}
 
-table , td, th {
-  width: 100%;
-	border: 1px solid #e1e1e1;
-	border-collapse: collapse;
-}
-td, th {
-  color: #555;
-	padding: 3px;
-	width: 30px;
-	height: 25px;
-	text-align: center;
+
+  table , td, th {
+  	border: 1px solid #e1e1e1;
+  	border-collapse: collapse;
+  }
+  td {
+    width: 70%;
+    color: #555;
+  	padding: 3px;
+  	height: 25px;
+  	text-align: center;
+  }
+  
+  th{
+    width: 30%;
+    color: #555;
+  	padding: 3px;
+  	height: 25px;
+  	text-align: center;
+  }
+  
 }
   
 .recent_pro {
@@ -367,18 +411,38 @@ td, th {
   }
   
 .guide_cover{
-   margin:30px 0 30px 0;
+   margin: 20px 0 20px 0;
+   
+    @media(max-width:550px){
+    display: none;
+  }
+  
+}
+
+.guide_cover_sp{
+  text-align: center;
+  margin: 15px 0px 15px 0px;
+  
+   @media(min-width: 550px){
+    display: none;
+  }
+  
 }
 
 .flex_container{
   display: flex;
   display: -webkit-flex;
   justify-content: space-between;
+  
+  @media(max-width:550px){
+    flex-direction: column;
+  }
+  
 }
 
 .flex_container .left_box{
   padding-left: 15px;
-  background: $box;
+  background: white;
   width: 100%;
   box-sizing: border-box;
   margin-right: 10px;
@@ -386,6 +450,11 @@ td, th {
   img{
     display: block;
   }
+  
+   @media(max-width:550px){
+    margin-bottom: 10px;
+  }
+  
 }
 
 .aa{
@@ -409,12 +478,17 @@ td, th {
   padding-right: 15px;
   padding-bottom: 20px;
   box-sizing: border-box;
-  background: $box;
+  background: white;
   width: 100%;
   
   img{
     display: block;
   }
+  
+  @media(max-width:550px){
+    margin-bottom: 10px;
+  }
+  
 }
 
 .cc{
@@ -470,7 +544,7 @@ p1{
 }
 
 .search_text input{
-  background: $beige;
+  background: #e2ddd4;
   border: 1px;
   background-image: url("../images/top/search_icon.png");
   background-position-x: 95%;
@@ -532,8 +606,27 @@ p1{
   
 }
 
+.about_left{
+  
+  @media(max-width:550px){
+  margin-right: 10px;
+  width: 50%;
+  }
+  
+}
+
+.about_right{
+  
+  @media(max-width:550px){
+  margin-right: 10px;
+  width: 50%;
+  }
+  
+}
+
 .about_right p{
   margin-bottom: 0px;
+  margin-top: 20px;
 }
 
 .about_right img{
@@ -561,8 +654,27 @@ p1{
   
 }
 
+.shop_left{
+  
+  @media(max-width:550px){
+  margin-right: 10px;
+  width: 50%;
+  }
+  
+}
+
+.shop_right{
+  
+  @media(max-width:550px){
+  margin-right: 10px;
+  width: 50%;
+  }
+  
+}
+
 .shop_right p{
   margin-bottom: 0px;
+  margin-top: 20px;
 }
 
 .shop_right img{
@@ -575,7 +687,7 @@ p1{
 
 footer.container{
   width: 100%;
-  margin: 100px auto;
+  margin-top: 20px;
   
   @media(max-width:550px){
     margin-top: 0px;
@@ -589,7 +701,9 @@ footer.container{
   
   @media(max-width:550px){
     text-align: center;
+    margin: 15px 0 15px 0;
   }
+  
 }
 
 .contact{

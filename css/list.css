@@ -11,7 +11,7 @@ img {
   max-width: 100%; }
 
 body {
-  background: #f6f2eb; }
+  background: #f9f8f6; }
 
 header #header_in {
   padding-top: 20px;
@@ -57,9 +57,14 @@ header #header_in {
       margin-top: 15px;
       margin-bottom: 0px; } }
 
-@media (min-width: 550px) {
-  #sub_navi_btm {
-    display: none; } }
+#sub_navi_btm {
+  cursor: pointer; }
+  @media (min-width: 550px) {
+    #sub_navi_btm {
+      display: none; } }
+
+.sp_menu_toggle {
+  display: none; }
 
 .container {
   width: 100%; }
@@ -69,10 +74,14 @@ header #header_in {
   background-position-x: 1%;
   background-repeat: no-repeat;
   background-position-y: center;
-  background-color: #e2ddd4; }
+  background-color: #e2ddd4;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 3px; }
   .top_box p {
     color: #937f69;
-    margin-left: 22px; }
+    margin: 0px;
+    padding-left: 15px; }
 
 @media (max-width: 550px) {
   .categoryname_pc {
@@ -91,11 +100,12 @@ header #header_in {
   justify-content: space-between; }
 
 #new .items_box {
-  background: #f9f8f6;
-  width: 50%;
+  background: white;
+  width: 49%;
   height: 100%;
   padding: 10px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin-bottom: 1px; }
   @media (min-width: 550px) {
     #new .items_box {
       background: #f9f8f6;
@@ -154,11 +164,12 @@ header #header_in {
   justify-content: space-between; }
 
 #popular .popular_box {
-  background: #f9f8f6;
-  width: 50%;
+  background: white;
+  width: 49%;
   height: 100%;
   padding: 10px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin-bottom: 1px; }
   @media (min-width: 550px) {
     #popular .popular_box {
       background: #f9f8f6;
@@ -168,21 +179,37 @@ header #header_in {
       margin: 1px; } }
 
 .guide_cover {
-  margin: 30px 0 30px 0; }
+  margin: 20px 0 20px 0; }
+  @media (max-width: 550px) {
+    .guide_cover {
+      display: none; } }
+
+.guide_cover_sp {
+  text-align: center;
+  margin: 15px 0px 15px 0px; }
+  @media (min-width: 550px) {
+    .guide_cover_sp {
+      display: none; } }
 
 .flex_container {
   display: flex;
   display: -webkit-flex;
   justify-content: space-between; }
+  @media (max-width: 550px) {
+    .flex_container {
+      flex-direction: column; } }
 
 .flex_container .left_box {
   padding-left: 15px;
-  background: #f9f8f6;
   width: 100%;
   box-sizing: border-box;
-  margin-right: 10px; }
+  margin-right: 10px;
+  background: white; }
   .flex_container .left_box img {
     display: block; }
+  @media (max-width: 550px) {
+    .flex_container .left_box {
+      margin-bottom: 10px; } }
 
 .aa {
   margin-top: 10px;
@@ -201,10 +228,13 @@ header #header_in {
   padding-right: 15px;
   padding-bottom: 20px;
   box-sizing: border-box;
-  background: #f9f8f6;
+  background: white;
   width: 100%; }
   .flex_container .right_box img {
     display: block; }
+  @media (max-width: 550px) {
+    .flex_container .right_box {
+      margin-bottom: 10px; } }
 
 .cc {
   margin-bottom: 10px; }
@@ -246,7 +276,7 @@ p1 {
   width: 100%; }
 
 .search_text input {
-  background: #f6f2eb;
+  background: #e2ddd4;
   border: 1px;
   background-image: url("../images/top/search_icon.png");
   background-position-x: 95%;
@@ -297,8 +327,19 @@ p1 {
       display: flex;
       display: -webkit-flex; } }
 
+@media (max-width: 550px) {
+  .about_left {
+    margin-right: 10px;
+    width: 50%; } }
+
+@media (max-width: 550px) {
+  .about_right {
+    margin-right: 10px;
+    width: 50%; } }
+
 .about_right p {
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+  margin-top: 20px; }
 
 .about_right img {
   margin-top: 10px;
@@ -320,8 +361,19 @@ p1 {
       display: flex;
       display: -webkit-flex; } }
 
+@media (max-width: 550px) {
+  .shop_left {
+    margin-right: 10px;
+    width: 50%; } }
+
+@media (max-width: 550px) {
+  .shop_right {
+    margin-right: 10px;
+    width: 50%; } }
+
 .shop_right p {
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+  margin-top: 20px; }
 
 .shop_right img {
   margin-top: 10px;
@@ -333,12 +385,17 @@ p1 {
 footer.container {
   width: 100%;
   margin: 100px auto; }
+  @media (max-width: 550px) {
+    footer.container {
+      margin-top: 0px;
+      margin-bottom: 0px; } }
 
 .pagetop {
   text-align: right; }
   @media (max-width: 550px) {
     .pagetop {
-      text-align: center; } }
+      text-align: center;
+      margin: 15px 0 15px 0; } }
 
 .contact {
   border-top: 1px solid black;
