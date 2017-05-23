@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 html {
-    font-size: 40%;
+    font-size: 50%;
     font-family: 'Abel', sans-serif;
 }
 
@@ -24,6 +24,12 @@ $box : #f9f8f6;
 
 body{
   background: #f9f8f6;
+  padding: 10px;
+  
+  @media(max-width:550px){
+    padding: 10px;
+  }
+  
 }
 
 header {
@@ -92,7 +98,7 @@ header {
   
 }
 
-#sub_navi_btm{
+#sub_navi_btn{
   cursor: pointer;
   @media(min-width: 550px){
     display:none;
@@ -100,8 +106,13 @@ header {
 }
 
 .sp_menu_toggle{
-  display: none;
-    
+  
+      display: none;
+      position: absolute;  
+      top: 100px;
+      right: 20%;
+      z-index: 100;
+  
     li{
       list-style: none;
       background: white;
@@ -110,12 +121,13 @@ header {
       padding: 5px 5px 5px 5px;
       
       a{
-      text-decoration: none;
-      color: #887f69;
+        display: block;
+        text-decoration: none;
+        color: #887f69;
       }
       
     }
-  
+
 }
 
 
@@ -123,15 +135,6 @@ header {
 
 .container{
   width: 100%;
-}
-
-#banner{
-  
-  @media(max-width:550px){
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-  
 }
 
 .new_item {
@@ -145,7 +148,7 @@ header {
 
 .new_item_sp{
   text-align: center;
-  margin: 10px 0px 10px 0px;
+  margin: 15px 0px 15px 0px;
   
   @media(min-width: 550px){
     display: none;
@@ -189,7 +192,7 @@ header {
 
 .popular_items_sp{
   text-align: center;
-  margin: 15px 0px 15px 0px;
+  margin: 20px 0px 20px 0px;
   
   @media(min-width: 550px){
     display: none;
@@ -234,7 +237,7 @@ header {
 
 .guide_cover_sp{
   text-align: center;
-  margin: 15px 0px 15px 0px;
+  margin: 20px 0px 20px 0px;
   
    @media(min-width: 550px){
     display: none;
@@ -276,15 +279,31 @@ header {
   margin-bottom: 0px;
   
   p{
-    margin-bottom:10px;
-    margin-top: 10px;
-    font-weight: bold;
+    
+    @media(min-width:550px){
+     margin-bottom:10px;
+     margin-top: 10px;
+     font-weight: bold;
+    }
+  
+    font-size: 14px;  
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
+  
 }
 
 .bb p{
-  margin-top: 10px;
-  font-weight: bold;
+  
+  @media(min-width:550px){
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  
 }
 
 .flex_container .right_box{
@@ -313,9 +332,17 @@ header {
   margin-top: 10px;
   
   p{
+    
+    @media(min-width:550px){
     margin-top: 10px;
     margin-bottom: 0px;
     font-weight: bold;
+    }
+    
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
   }
 }
 
@@ -323,9 +350,17 @@ header {
   margin-top: 10px;
   
   p{
-    margin-top: 10px;
-    margin-bottom: 0px;
-    font-weight: bold;
+    
+    @media(min-width:550px){
+      margin-top: 10px;
+      margin-bottom: 0px;
+      font-weight: bold;
+    }
+    
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
   }
   
 }
@@ -342,15 +377,30 @@ p1{
   color: $text;
   margin-top: 10px;
   font-weight: bold;
+  
+  @media(max-width:550px){
+   font-size: 14px;  
+  }
+  
 }
   
 .search_box{
   background: white;
   padding: 10px 10px 5px 15px;
+  
+  @media(max-width:550px){
+    padding: 20px;
+  }
+  
 }
 
 .search_cover{
   margin-bottom: 5px;
+  
+  @media(max-width:550px){
+   display: none;  
+  }
+  
 }
 
 .search_text{
@@ -358,7 +408,7 @@ p1{
 }
 
 .search_text input{
-  background: #f9f8f6;
+  background: #eeeeee;
   border: 1px;
   background-image: url("../images/top/search_icon.png");
   background-position-x: 95%;
@@ -367,10 +417,14 @@ p1{
   border-radius: 0;
   width: 100%;
   
+  @media(max-width:550px){
+   margin-bottom: 5px;  
+  }
+  
 }
 
 .link_box{
-  background: $text;
+  background: #898069;
   padding: 13px;
   margin-top: 10px;
   background-image: url("../images/top/next_icon.png");
@@ -380,7 +434,7 @@ p1{
 }
 
 .catego{
-  background: $text;
+  background: #898069;
   margin-top: 10px;
   padding: 13px;
   background-image: url("../images/top/down_icon.png");
@@ -407,7 +461,7 @@ p1{
   }
   
 .about_cover{
-  background: $text;
+  background: #898069;
   padding: 13px;
   margin-top: 10px;
 }
@@ -455,7 +509,7 @@ p1{
 }
 
 .shop_cover{
-  background: $text;
+  background: #898069;
   padding: 13px;
   margin-top: 10px;
 }
@@ -517,7 +571,7 @@ footer.container{
     
     @media(max-width:550px){
       text-align: center;
-      margin: 15px 0 15px 0;
+      margin: 25px 0 20px 0;
     }
     
   }

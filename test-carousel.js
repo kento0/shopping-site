@@ -18,7 +18,7 @@ $(window).load(function(){
 });
 
 $(document).ready(function(){
-  $("#sub_navi_btm img").click(function(){
+  $("#sub_navi_btn").click(function(){
     $(".sp_menu_toggle").slideToggle();
   });
 });
